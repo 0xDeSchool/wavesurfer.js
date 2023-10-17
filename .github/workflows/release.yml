@@ -25,6 +25,7 @@ jobs:
           if [ $NEW_VERSION != $OLD_VERSION ]; then
             echo "New version $NEW_VERSION detected"
             echo "version=$NEW_VERSION" >> $GITHUB_OUTPUT
+            git log "$OLD_VERSION"..HEAD --pretty=format:"* %s" > TEMP_CHANGELOG.md
           else
             echo "Version $OLD_VERSION hasn't changed, skipping the release"
           fi
