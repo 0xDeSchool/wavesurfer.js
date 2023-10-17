@@ -24,17 +24,14 @@ jobs:
           echo "New version $NEW_VERSION detected"
 
       - uses: actions/setup-node@v3
-        if: ${{ steps.version.outputs.version }}
         with:
           node-version: '16.x'
           registry-url: 'https://registry.npmjs.org'
 
       - name: Install dependencies
-        if: ${{ steps.version.outputs.version }}
         run: npm install --legacy-peer-deps
 
       - name: Publish to NPM
-        if: ${{ steps.version.outputs.version }}
         env:
           NODE_AUTH_TOKEN: ${{ secrets.npm_token }}
         run: npm publish
