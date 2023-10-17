@@ -1,5 +1,5 @@
 {
-  "name": "@deschool/wavesurfer.js",
+  "name": "echo-wavesurfer.js",
   "version": "7.3.8-echo",
   "license": "BSD-3-Clause",
   "author": "katspaugh",
@@ -15,7 +15,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git@github.com:wavesurfer-js/wavesurfer.js.git"
+    "url": "git@github.com:0xDeSchool/wavesurfer.js.git"
   },
   "type": "module",
   "files": [
