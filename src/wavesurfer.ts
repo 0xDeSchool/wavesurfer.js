@@ -236,6 +236,11 @@ class WaveSurfer extends Player<WaveSurferEvents> {
       }),
     )
 
+    // 暂停时也会渲染进度
+    if (this.getCurrentTime() > 0) {
+      this.renderer.renderProgress(this.getCurrentTime() / this.getDuration(), this.isPlaying())
+    }
+
     // Drag
     {
       let debounce: ReturnType<typeof setTimeout>
