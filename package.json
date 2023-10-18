@@ -1,6 +1,6 @@
 {
   "name": "echo-wavesurfer.js",
-  "version": "7.3.8-echo2",
+  "version": "7.3.8-echo3",
   "license": "BSD-3-Clause",
   "author": "katspaugh",
   "description": "Navigable audio waveform player",
